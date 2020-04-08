@@ -1,15 +1,31 @@
-import React from 'react';
-import { StyleSheet, Text, View, Button, Alert } from 'react-native';
+import React,{Component} from 'react';
+import { StyleSheet, Text, View, Button, Alert,TextInput} from 'react-native';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Workshop React Native: Leonardo Gomez</Text>
-      <Button title="Bienvenido"
-         onPress={()=>{Alert.alert("Bienvenido LG")}}
-    />
-    </View>
-  );
+export default class App extends Component {
+  constructor(){
+    super();
+    this.state={
+      nombre:''
+    }
+
+  }
+
+
+  render(){
+    return (
+      <View style={styles.container}>
+        <Text>Workshop React Native: Leonardo Gomez</Text>
+        <TextInput 
+          placeholder="Ejemplo"        
+          value={this.state.nombre}
+          onchangeText={(txt)=>{this.setState({nombre:txt})}}
+        />
+        <Button title="Bienvenido"
+           onPress={()=>{Alert.alert("HOLA"+this.state.nombre)}}
+      />
+      </View>
+    );
+  }
 }
 
 const styles = StyleSheet.create({
