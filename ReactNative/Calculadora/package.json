@@ -15,7 +15,7 @@
     "react": "~16.13.1",
     "react-dom": "~16.13.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-37.0.1.tar.gz",
-    "react-native-web": "~0.12.2",
+    "react-native-web": "~0.12.3",
     "snyk": "^1.336.0"
   },
   "devDependencies": {
